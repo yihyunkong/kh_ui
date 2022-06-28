@@ -3,7 +3,7 @@
 // Array.from, concat, slice, spread(...), Object.assign로 하면 모두 다 얕은 복사임
 const sonata = { carColor: 'red', speed: 50};
 const casper = { carColor: 'white', speed: 0};
-const pride = { carColor: 'blac', speed: 60};
+const pride = { carColor: 'blac', speed: 60}; 
 
 const hyundai = [sonata, casper];
 const kia = Array.from(hyundai);

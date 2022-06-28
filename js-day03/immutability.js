@@ -6,7 +6,7 @@ function callByReference(object){
 }
 const scott = { ename: 'scott'}
 callByReference(scott);
-
+  
 function changeName(obj){
   return {...obj, ename: 'king'}; // spread연산자를 통해 값을 추가할 수 있음 >> react에서 활용빈도가 아주 높다.
 }

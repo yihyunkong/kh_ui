@@ -3,7 +3,7 @@ console.log(colors[0]);
 console.log(colors[1]);
 console.log(colors[2]);
 
-// 배열에 내용 추가, 삭제
+// 배열에 내용 추가, 삭제c
 
 colors[4] = 'white';
 console.log(colors);

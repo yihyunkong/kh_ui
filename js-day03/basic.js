@@ -10,7 +10,7 @@ const total = hap; // 함수도 Object이므로 주소번지를 가지기 때문
 console.log(total(2, 3));
 console.log(hap2(2, 3));
 console.log(hap3(2, 3));
-
+  
 // 이 부분 제대로 이해하기~!~!
 const minus  = (a, b) => a-b; //  minus 함수에 대한 주소번지가 생긴다.
 const multiply = (a, b) => a*b;

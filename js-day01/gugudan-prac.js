@@ -1,8 +1,9 @@
-function gugudan() { // x는 시작단
-  // 시작단 for문
-  for(var i=2; i<=9; i++){
-    for(var j=1; j<=9; j++){
+function guguDan(i, j){
+  for (let i = 2; i <= 9; i++) { // 2단에서 9단 까지
+    console.log(i + '단');
+    for (let j = 1; j <= 9; j++) {
+      console.log(i + '*' + j + "=" + (i * j))
     }
   }
-  consol.log(gugudan(2));
 }
+console.log(guguDan());

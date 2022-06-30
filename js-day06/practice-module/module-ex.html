@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="greeting.js"></script>
+</head>
+<body>
+  <script>
+    function welcome(){ // welcome이라는 함수를 이 페이지 뿐 아니라 다른 무수한 페이지에도 사용해야한다면?
+      return 'Hello World'
+    }
+    alert(welcome());
+  </script>
+</body>
+</html>
+
+<!-- 
+  이 코드를 실행하면 'Hello World'라는 alert이 뜨게된다.
+  이유는? script의 src에 저장한 greeting.js가 사용되었기 때문이다.
+-->

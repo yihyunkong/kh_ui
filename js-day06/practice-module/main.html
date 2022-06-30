@@ -5,14 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script type="text/javascript" src="greeting.js"></script>
+  <script src="greeting.js"></script>
 </head>
 <body>
   <script>
-    function welcome(){ // welcome이라는 함수를 이 페이지 뿐 아니라 다른 무수한 페이지에도 사용해야한다면?
-      return 'Hello World'
-    }
-    alert(welcome());
+    alert(welcome()); // welcome이라는 함수를 호출한다. 어디서? greeting.js에서 ! greeting.js는 welcome이라는 함수를 가지고 있다.
   </script>
 </body>
 </html>

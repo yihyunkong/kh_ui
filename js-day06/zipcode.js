@@ -22,7 +22,7 @@ function action(dong){  // action 함수
   document.getElementById("root").innerHTML = ""; // 다시 입력해도 새로운 조건만 나오게 된다.
   console.log('사용자가 입력한 동 이름 : ' + dong); // 동 이름이 입력되면 action 함수가 진행 -> console 출력
   // 동 정보를 입력받고 처리를 해야한다.
-  const ajax = new XMLHttpRequest(); 
+  const ajax = new XMLHttpRequest();
   const ZIPCODE_URL = 'http://localhost:8000/dev_web/json/jsonZipcodeList.jsp?dong=' + dong;
   ajax.open('GET', ZIPCODE_URL, false); // get타입으로 서버에 클라에서 서버로 요청하기
   ajax.send(); // 전송이 일어난다

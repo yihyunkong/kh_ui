@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      border: 1px solid red;
+      box-sizing: border-box;
+    }
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+      margin-bottom: 8px;
+    }
+    ul.gnb {
+      float: left;
+      background-color: green;
+    }
+    ul.gnb > li {
+      list-style-type: none;
+      float: left;
+      padding-left: 16px;
+    }
+    ul.rank {
+      float: right;
+      background-color: yellow;
+    }
+    ul.rank > li {
+      list-style-type: none;
+      padding-left: 0px;
+    }
+    .left {
+      float: left;
+      background-color: red;
+      width: 740px;
+      height: 428px;
+    }
+    .right {
+      float: right;
+      background-color: blue;
+      width: 332px;
+      height: 428px;
+    }
+    .footer {
+      background-color: yellow;
+      height: 80px;
+      overflow: hidden; /* 오ㅐ 박스가 하단으로 안내려가지? */
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Logo</h1>
+  </div>
+
+  <div class="container">
+    <ul class="gnb">
+      <li>메일</li>
+      <li>카페</li>
+      <li>블로그</li>
+      <li>쇼핑</li>
+      <li>사전</li>
+      <li>뉴스</li>
+      <li>증권</li>
+      <li>부동산</li>
+      <li>지도</li>
+    </ul>
+    <ul class="rank">
+        <!-- 11. 내부의 li 태그들은 list-style-type을 none으로 지정합니다. -->
+      <li>실시간 검색 순위</li>
+    </ul>
+  </div>
+​
+​
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <!-- 추가합니다. -->
+    <div class="container">
+      <!-- 높이를 80px로 지정했습니다. -->
+      <div class="footer"></div>
+    </div>
+</body>
+</html>

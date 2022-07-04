@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { /* 전체 요소를 설정할 수 있다. */
+      border: 1px solid black; /* 모든 태그의 border-line을 확인할 수 있다.  */
+    }
+    .box {
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      float: right;
+      margin-left: 10px; /* margin을 설정할 때 각 방향의 간격을 구분할 수 있다. margine은 위아래왼오 모두 설정됨 */
+    }
+  </style>
+</head>
+<body>
+<!--   <div class="box">
+    <h1>1</h1>
+  </div>
+  <div class="box">
+    <h1>2</h1>
+  </div>
+  <div class="box">
+    <h1>3</h1>
+  </div> -->
+  <!-- 만약 div를 span으로 바꾼다면? div는 줄바꿈이 되지만, span은 옆으로 붙는다. -->
+  <span class="box">1</span>
+  <span class="box">2</span>
+  <span class="box">3</span>
+<!--   <span style="width:100px; height:100px">1</span><span>2</span><span>3</span> -->
+</body>
+</html>
+
+<!-- 
+  span은 inline 요소이다. (div 태그에 비해서 추가적인 요소가 필요하다.)
+  padding은 내부, margin은 외부 간격
+-->

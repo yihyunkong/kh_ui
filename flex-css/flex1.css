@@ -1,0 +1,36 @@
+.container {
+  padding-top: 100px;
+  background-color: beige;
+  height: 100vh; /* 눈에 보이는 높이의 100%를 모두 다 쓸 때 (viewheight) */
+  display: flex; /* 왼쪽에서 오른쪽으로 정렬 */
+  /*flex-direction: row; /* column 위에서 아래로 */
+  /*flex-wrap: wrap;*/
+  /*flex-flow: row wrap; /* 위에 두개 합치기 */
+  /*justify-content: flex-start; /* around 시작점의 간격까지 고려해서 정렬 */
+  /*align-items: baseline; /* 반대축에서 어떻게 할건지를 결정한다. */
+  /*align-content: center; /* 메인축에서 중앙에 배치가 된다. */
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.item1 {
+  background-color: #311b92;
+  flex-grow: 2;
+  flex-shrink: 2; /* item2, item3 보다 2배 더 적게 줄어듦 */
+}
+
+.item2 {
+  background-color: #000063;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.item3 {
+  background-color: #0d47a1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

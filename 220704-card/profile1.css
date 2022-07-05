@@ -1,0 +1,142 @@
+/* * {
+  border: 1px solid red;
+  margin: 0px;
+  padding: 0px; /* 패딩값이 너비값에 포함되어 있게 됨 */
+ /* box-sizing: border-box;
+} */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+.wrap {
+  width: 340px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.wrap .profile {
+  width: 100%;
+  text-align: center;
+}
+.wrap .profile .btnview {
+  display: block;
+  width: 180px;
+  height: 32px;
+  font: bold 12px/32px "arial";
+  margin: 0px auto 20px;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+  background-color: aqua;
+  border-radius: 16px;
+}
+
+.wrap .profile img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20%;
+}
+
+.wrap .profile h1 {
+  font: bold 22px/1 "arial";
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.wrap .profile p {
+  font: bold 12px/1 "arial";
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.wrap .profile .btnView {
+  display: block;
+  width: 180px;
+  height: 32px;
+  font: bold 12px/32px "arial";
+  margin:  0px auto 20px;
+  color: white;
+  text-shadow: 0px 0px 5px rgba(255,255,255,0.6);
+  background-color: aqua;
+  border-radius: 16px;
+}
+
+.wrap .contact {
+  margin-bottom: 25px;
+}
+
+.wrap .contact li {
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.wrap .contact li {
+  border-bottom: none;
+}
+
+.wrap .contact li i {
+  width: 20%;
+  text-align: center;
+  color: #555555;
+  font-size: 14px;
+}
+
+.wrap .contact .li span {
+  font: 11px/1 "orbitron";
+  color: #555555;
+  letter-spacing: 1px; /* 글자간 간격 */
+}
+
+.wrap .others {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrap .others a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0px 10px;
+  opacity: 0.4;
+}
+
+.wrap .others a .on {
+  opacity: 1;
+}
+
+.wrap .others a:nth-of-type(1) {
+  background-color: aqua;
+}
+
+.wrap .others a:nth-of-type(2) {
+  background-color: green;
+}
+
+.wrap .others a:nth-of-type(3) {
+  background-color: hotpink;
+}
+
+.wrap .others a:nth-of-type(4) {
+  background-color: purple;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}

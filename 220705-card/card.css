@@ -1,0 +1,85 @@
+* {
+  border: 1px solid red;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top : 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  padding: 20px;
+  color: #222;
+  width: 280px;
+  border-radius: 8px;
+  margin: 30px;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h1 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 선택할 때 >의 유무 차이 알아보자!! */
+
+.card p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-wrap img {
+  position: relative;
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 32px;
+  float: left;
+}
+
+.user-name {
+  font-size: 14px;
+}
+
+.icons {
+  margin-top: 4px;
+  /* display: flex; */
+}
+
+.chat, 
+.favorite {
+  display: inline-block;
+}
+
+.chat {
+  margin-right: 10px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+
+.chat span,
+.favorite span {
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+  float: left;
+}

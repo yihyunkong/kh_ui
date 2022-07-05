@@ -1,101 +1,106 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Titan+One&display=swap');
+* {
+  /* border: 1px solid rgb(255, 201, 201); */
   box-sizing: border-box;
-  border: 1px solid red;
 }
-
-ul {
-  list-style: none;
-}
-
+/* 밑줄 사라지게 하고싶어 */
 a {
   text-decoration: none;
 }
-
+/* 배경색 바꿀래 */
 body {
+  background-color: black;
+}
+.container {
+  width: 100%;
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: auto;
+  position: relative;
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0px;
+  position: absolute;
+  z-index: 3;
+}
+header h1 {
+  margin: 0px;
+  height: 40px;
+  float: left;
+}
+header h1 img {
   background-color: white;
 }
-
-header {
-  width: 100%; /* 1 */
-  border-bottom: 1px solid #aaaaaa; /* 2 메뉴아래 구분선*/
-  display: flex; /* 3 */
-  justify-content: space-between; /*4 양끝에 배치하면 균등배치*/
-  top: 0px;
-  left: 20px;
-  align-items: center;
-  position: absolute;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-  z-index: 2;
+.main-navigation {
+  float: right;
 }
-
-header h1 {
-  font: bold;
+.main-navigation a {
   color: white;
-  margin: 0px 20px;
+  margin-left: 20px;
 }
-
-header .gnb {
-  display: flex; /* 5 안쪽에 있는 li들이 좌우배치됨 */
-}
-
-header .gnb li {
-  margin: 0px 20px; /* 6. 위아래 0px 양옆에 20px */
-}
-
-header .gnb li a {
+.btn {
+  display: inline-block;
   color: white;
-  letter-spacing: 2px; 
-
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: blue;
 }
-
-header .lnb {
-  display: flex;
+.ghost-btn {
+  /* 버튼 배경을 투명하게 */
+  background-color: transparent;
+  border: 1px solid blue;
 }
-
-header .lnb li {
-  margin: 0px 10px;
-}
-
-header .lnb li a {
-  font-size: 16px;
-  color:  white;
-}
-
-header .btnMenu {
-  font-size: 24px;
-  color: white;
-  display: none;
-}
-
-.camp-bg {
-  width: 100%;
+.text-wrap {
+  width: 520px;
   height: 100vh;
+  padding: 240px 20px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  color: white;
 }
-
-.videp-wrap {
-  position:absolute;
+.text-wrap h2 {
+  color: white;
+  font-size: 64px;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  font-weight: lighter;
+}
+.text-wrap h3 {
+  color: white;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.text-wrap p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.video-wrap {
+  position: absolute;
   left: 0px;
   width: 100%;
   height: 100vh;
   z-index: 1;
 }
-
-.videp-wrap video {
-  position:absolute;
+.video-wrap video {
+  display: block;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: fill;
 }
-
 /* 반응형 웹 처리 */
+/* 위의 문제를 미디어 쿼리로 해결
+  -크기가 1024px로 줄면 중간 자바, 오라클,..이 사라지고
+   세줄목록이 나오게 해줌
+*/
 @media screen and (max-width: 1024px) {
-  header .gnb {
-    display: none;
-  }
-  header .lnb {
-    display: none;
-  }
-  header .btnMenu {
-    display: block;
-  }
 }

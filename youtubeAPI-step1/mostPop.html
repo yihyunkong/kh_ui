@@ -5,9 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YoutubeAPI - step1[mostPopulars]</title>
-  <script src="./mostPop.js" defer></script>
+  <link rel="stylesheet" href="./mostPop.css">
+  <script src="./mostPop.js" defer></script> <!-- defer를 추가하면 스크립트 먼저 처리된다. -->
 </head>
 <body>
   <div id="root"></div>
 </body>
 </html>
+<!-- 
+  html을 읽어서 DOM Tree 구성 -> 브라우저
+  중간에 mostPop.js를 만나면 XMLHttpRequest 통신 요청이 발생한다.
+  지연 상황 발생
+  요청을 한 응답을 받아와야 되니까
+  추가되는 위치는 div 태그 내부 -> innerHTML을 사용해도 된다. 
+  지연 상황이 발생하면 화면 처리가 늦어진다.
+  사용자는 닫는다. 
+  스크립트를 미루고 화면을 먼저 처리한다. -> DOM Tree 구성
+  script defer를 추가한다.
+  defer를 추가하려면 script를 div 아래에 넣는다.
+-->

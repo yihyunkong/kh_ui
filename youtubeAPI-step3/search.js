@@ -1,5 +1,7 @@
 function handleEnter(){
-  if(event.keyCode === 13) { // 키를 눌렀을 때 - 13번이면 enter에 대한 코드값
+  alert(event.keyCode)
+  if(event.keyCode === 13) {
+    console.log('엔터 쳤을 때') // 키를 눌렀을 때 - 13번이면 enter에 대한 코드값
     searchList();
   }
 }
@@ -18,7 +20,14 @@ function searchList(){
   console.log(items.length);//25
   videoList.push(`<ul class='videos'>`);
   for(let i=0;i<items.length;i++){
-    
+    videoList.push(`<li class='container'>`);
+    videoList.push(`<div class='video'>`);
+    videoList.push(`<img class='thumbnail' src='${items[i].snippet.thumbnails.medium.url}' alt='이미지'/`);
+    videoList.push(`<div>`);
+    videoList.push(`<p class='title'>${items[i].snippet.title}</p>`);
+    videoList.push(`<p class='channel'>${items[i].snippet.channelTitle}</p>`);
+    videoList.push(`</div>`);
+    videoList.push(`</div>`);
   }
   videoList.push(`</ul>`);
   document.querySelector('#root').innerHTML = videoList.join("");

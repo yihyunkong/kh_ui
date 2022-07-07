@@ -1,8 +1,8 @@
-const ajax = new XMLHttpRequest(); // 비동기 통신 객체 - get, post
-let content = '';
+const ajax = new XMLHttpRequest(); // 비동기 통신 객체 - get, post를 사용하는 방식이다. (ajax: 비동기 방식으로 데이터를 교환한다.)
+let content = ''; // 공백 선언
 const MOST_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=AIzaSyCmMxUZRAC9Wso1TJDqLYKggqBzP13vJM8&q=백현";
 ajax.open("GET", MOST_URL, false); // get 방식
-ajax.send();
+ajax.send(); // 지연이 발생할 수 있다.
 
 //console.log(ajax.response);
 const result = JSON.parse(ajax.response); /* 객체 보여주기 ! { ... items[{snippet: ... }]} */

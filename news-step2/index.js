@@ -61,20 +61,24 @@ fetch("https://api.hnpwa.com/v0/news/1.json", requestOptions)
     // 무엇으로 기준할 것인가?
     /*
         글 목록의 링크는 #이었음(해쉬값) 그러면 location.hash에 #이 들어왔음
-        그러면 이것으로 어떤 참 거짓을 나눌 수 있지?
-        location.hash에 #만 들어오면 빈 값을 반환한다.
+        그러면 이것으로 어떤 참 거짓을 나눌 수 있지? 0이면 false 나머지는 모두 true
+        location.hash에 #만 들어오면 빈 값을 반환한다. ""
         첫 진입일 때는 getNewsList를 호출하고
         해시값이 존재하면 getNewsContent를 호출한다.
     */
     function router() {
+        //console.log(location.hash); // #3214567
         const hashValue = location.hash;
         // 첫 진입이면 ?
         if(hashValue === "") {
             getNewsList();
-        } else {
+        } else { // hash 값이 존재하면
             getNewsContent();
         }
     } //////// end of router
 
     window.addEventListener("hashchange", router); // 이벤트 핸들러 매핑 
     router();
+
+    // 페이지의 특성 : 변한다.... 현재 페이지가 몇번째 페이지인지 기억하는 변수가 필요하다. 상수가 아닌 변수 ! (페이지의 위치값이 바뀔거니까)
+    // 페이지 정보는 언제 어디서 사용될까? 

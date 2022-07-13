@@ -1,6 +1,5 @@
 // 페이징 처리에 필요한 변수 선언하기
 // insert here - currentPage -> react에서는 redux
-// 페이징 관련한 정보는 어디에 위치하느냐에 따라 변하는 값이기 때문에 상수가 아닌 변수로 관리되어야한다.
 const store = {
     currentPage: 1
 }
@@ -19,7 +18,18 @@ function getNewsList(){
         .then(response => response.json())
         .then(result => {
             const newsList = [];
-            newsList.push("<ul>");
+            let template = `
+                <div>
+                    <h1>Hacker News</h1>
+                    <ul>
+                        {{__news_list__}}
+                    </ul>
+                    <div>
+                        <a href="#/page/{{__prev_page__}}">이전페이지</a>
+                        <a href="#/page/{{__next_page__}}">다음페이지</a>
+                    </div>
+                </div>
+            `;
             // insert here - 페이징 처리를 고려한 for문으로 변경 
             for(let i=(store.currentPage -1)*10; i < store.currentPage * 10; i++){
             //for(let i=0;i<30;i++){
@@ -29,20 +39,12 @@ function getNewsList(){
                             ${result[i].title} (${result[i].comments_count})
                         </a>
                     </li>
-                `); //// hash 값 # 중요하다.. # 없으면 화면 전환이 안될 것이다. hash 값을 통해 글 상세화면으로 이동한다.
+                `);
             } ///////// end of for
-            newsList.push("</ul>");
-            // insert here [이전페이지 : 현재 페이지에서 -1을 함] - #/page/이동할 페이지 번호 
-            // 조건문? 참일 때 : 거짓일 떄
-            // 조건문? 현재 페이지 -1 : 1
-            // insert here [다음페이지 : 현재 페이지에서 +1을 함] - #/page/이동할 페이지 번호 
-            newsList.push(`
-                <div>
-                    <a href="#/page/${store.currentPage > 1 ? store.currentPage - 1 : 1}">이전페이지</a>
-                    <a href="#/page/${store.currentPage + 1}">다음페이지</a>
-                </div>
-            `)
-            container.innerHTML = newsList.join("");
+            template = template.replace("{{__news_list__}}", newsList.join(""));
+            template = template.replace("{{__prev_page__}}", store.currentPage > 1 ? store.currentPage -1 : 1);
+            template = template.replace("{{__next_page__}}", store.currentPage + 1);
+            container.innerHTML = template;
         }).catch(error => console.log('error', error));
 } ///////////////// end of getNewsList()
 

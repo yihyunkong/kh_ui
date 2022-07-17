@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            height: 500px;
+            background-color: green;
+        }
+        .inner {
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+            transform: translateY(50%);
+        }
+        button {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <button>Click Me</button>
+        </div>
+    </div>
+    <script>
+        const outer = document.querySelector(".outer");
+        const inner = document.querySelector(".inner");
+        const button = document.querySelector("button");
+
+        outer.addEventListener('click', (event) => {
+            // 넌 버블링 대상이네 그만 나가줄래? - 익명함수 탈출 - 리턴을 만났으니까
+            if(event.target !== event.currentTarget) {
+                return; // if에서 return은 함수를 빠져나간다.
+            }
+        });
+        inner.addEventListener('click', (event) => {
+            console.log(`inner : ${event.currentTarget}, ${event.target}`);
+        });
+        button.addEventListener('click', (event) => {
+            console.log(`button1 : ${event.currentTarget}, ${event.target}`);
+            //event.stopPropagation(); // inner로 전환이 안된다. outer 더블링이 안된다.
+            //event.stopImmediatePropagation(); // 나만 실행이 된다.
+        });
+        button.addEventListener('click', (event) => {
+            console.log(`button2 : ${event.currentTarget}, ${event.target}`);
+        });
+    </script>
+</body>
+</html>
